@@ -39,6 +39,15 @@
 				}
 			});
 		</script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script type="text/javascript" defer>
+			(function () {
+				emailjs.init('6BLb_2uFrmHUcJEUX');
+			})();
+		</script>
 		<script type="text/javascript">
 			!(function (o, c) {
 				var n = c.documentElement,
@@ -1098,9 +1107,21 @@
 						${message}
 						`;
 
-						window.location.href = `mailto:ssdigitalstudionellai@gmail.com?subject=${encodeURIComponent(
-							'Enquire from ' + name
-						)}&&body=${encodeURIComponent(body)}`;
+						emailjs
+							.send(
+								'service_s5evf6o',
+								'template_arsz2ls',
+								{ body },
+								'6BLb_2uFrmHUcJEUX'
+							)
+							.then(
+								function () {
+									console.log('SUCCESS!');
+								},
+								function (error) {
+									console.log('FAILED...', error);
+								}
+							);
 					});
 				</script>
 				<div class="footer-links-wrap">
