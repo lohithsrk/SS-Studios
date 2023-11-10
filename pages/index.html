@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html
-	data-wf-domain="eyex-128.webflow.io"
+	data-wf-domain="ssstudios.in"
 	data-wf-page="63243aa30c3f22752000c30b"
 	data-wf-site="630dbb26f5d229a691ab43d0"
 	lang="en"
@@ -50,14 +50,11 @@
 			})(window, document);
 		</script>
 		<link
-			href="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/632c7a3ec0bc2448f0b91c99_Favicon%20Eyex.png"
+			href="../resources/logo-w.png"
 			rel="shortcut icon"
 			type="image/x-icon"
 		/>
-		<link
-			href="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/63930295a548c04c1608b098_Webclip%20Eyex.png"
-			rel="apple-touch-icon"
-		/>
+		<link href="../resources/logo-w.png" rel="apple-touch-icon" />
 		<script
 			async=""
 			src="https://www.googletagmanager.com/gtag/js?id=G-G2CEN2DJ2K"
@@ -104,11 +101,7 @@
 						href="./index.html"
 						aria-current="page"
 						class="brand w-nav-brand w--current"
-						><img
-							src="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/630dd63bf1be884c526bde7c_Eyex.svg"
-							loading="lazy"
-							alt=""
-							height="30"
+						><img src="../resources/logo.png" loading="lazy" alt="" height="80"
 					/></a>
 					<nav role="navigation" class="nav-menu w-nav-menu">
 						<div class="tablet-menu">
@@ -117,10 +110,10 @@
 								aria-current="page"
 								class="brand-tablet w-nav-brand w--current"
 								><img
-									src="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/630dd63bf1be884c526bde7c_Eyex.svg"
+									src="../resources/logo.png"
 									loading="lazy"
 									alt=""
-									height="30"
+									height="80"
 							/></a>
 							<div class="nav-close-button w-nav-button">
 								<img
@@ -347,7 +340,7 @@
 								style="opacity: 0"
 								class="content-block"
 							>
-								<h2 class="number">5K</h2>
+								<h2 class="number">₹5K</h2>
 								<h4 class="description width">
 									Approximate Profit In One Shoot
 								</h4>
@@ -409,15 +402,16 @@
 				</p>
 			</div>
 		</div>
-		<div class="team-negative-section">
+		<div class="team-negative-section" style="padding-bottom: 2rem">
 			<div class="base-container w-container">
 				<div class="our-team-wrapper" style="justify-content: center">
 					<div class="our-team-item">
 						<img
 							src="../resources/stephen.jpg"
 							loading="lazy"
-							width="392"
-							style="opacity: 0"
+							width="421"
+							height="400"
+							style="opacity: 0; object-position: left"
 							alt="team avatar"
 							data-w-id="3a1ce7bd-2750-28b4-45dc-3779bc14b2dc"
 							class="our-team-image"
@@ -442,6 +436,7 @@
 							src="../resources/kiruba.jpg"
 							loading="lazy"
 							width="421"
+							height="400"
 							style="opacity: 0"
 							alt="team avatar"
 							data-w-id="c00c38c3-96b9-eab6-9cff-b727d0ec6829"
@@ -507,7 +502,7 @@
 									class="right-quote-image"
 								/>
 								<p class="testimonials-quote">
-									Eyex managed to capture our big day through small details,
+									SS Studios managed to capture our big day through small details,
 									amazing mood settings and intimate moments and meeting between
 									us and the guests which made our day. The Imagery feels
 									natural, personal, and most of all it reflects the dynamics of
@@ -1033,48 +1028,42 @@
 						class="right-wrapper"
 					>
 						<div class="footer-form-wrapper w-form">
-							<form
-								id="email-form"
-								name="email-form"
-								data-name="Email Form"
-								method="get"
-								class="footer-form"
-								data-wf-page-id="63243aa30c3f22752000c30b"
-								data-wf-element-id="d076729c-b6c4-fab3-aabc-6c113b63df03"
-							>
+							<form class="footer-form" id="form">
 								<input
 									type="text"
 									class="text-field w-input"
 									maxlength="256"
-									name="name-2"
+									name="name"
 									data-name="Name 2"
 									placeholder="Your name"
 									id="name-2"
+									required
 								/><input
 									type="email"
 									class="text-field w-input"
 									maxlength="256"
-									name="Email-3"
+									name="email"
 									data-name="Email 3"
 									placeholder="Your email"
 									id="Email-3"
+									required
 								/><input
 									type="tel"
 									class="text-field w-input"
 									maxlength="256"
-									name="Phone-2"
+									name="phone"
 									data-name="Phone 2"
 									placeholder="Phone"
 									id="Phone-2"
 								/><input
-									type="email"
+									type="text"
 									class="text-field massage w-input"
 									maxlength="256"
-									name="Message-2"
+									name="body"
 									data-name="Message 2"
-									placeholder="Your massage"
+									placeholder="Your message"
 									id="Message-2"
-									required=""
+									required
 								/>
 								<div class="footer-button-wrapper">
 									<input
@@ -1094,13 +1083,34 @@
 						</div>
 					</div>
 				</div>
+				<script>
+					document.addEventListener('submit', (e) => {
+						e.preventDefault();
+						var name = document.getElementById('name-2').value;
+						var email = document.getElementById('Email-3').value;
+						var phone = document.getElementById('Phone-2').value;
+						var message = document.getElementById('Message-2').value;
+						var body = `
+						Name: ${name}
+						Phone: ${phone}
+						email: ${email}
+
+						${message}
+						`;
+
+						window.location.href = `mailto:ssdigitalstudionellai@gmail.com?subject=${encodeURIComponent(
+							'Enquire from ' + name
+						)}&&body=${encodeURIComponent(body)}`;
+					});
+				</script>
 				<div class="footer-links-wrap">
 					<a
 						href="./index.html"
 						aria-current="page"
 						class="logo-link w-inline-block w--current"
 						><img
-							src="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/630f65b1ac3592ef1203cb2d_Eyex%20(1).svg"
+							src="../resources/logo-w.png"
+							height="150"
 							loading="lazy"
 							alt="logo"
 							class="logo-image"
@@ -1124,6 +1134,7 @@
 				</div>
 			</div>
 		</div>
+
 		<script
 			src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=630dbb26f5d229a691ab43d0"
 			type="text/javascript"
@@ -1141,20 +1152,7 @@
 				}
 			});
 		</script>
-		<script>
-			setTimeout(function () {
-				var elementToRemove =
-					document.getElementsByClassName('w-webflow-badge')[0];
-				if (elementToRemove) {
-					elementToRemove.remove();
-				} else {
-					console.error('Element not found.');
-				}
-			}, 1000);
-		</script>
-		<script
-			src="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/js/webflow.ca21225ed.js"
-			type="text/javascript"
-		></script>
+
+		<script src="../js/index.js" type="text/javascript"></script>
 	</body>
 </html>

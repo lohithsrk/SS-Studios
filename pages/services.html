@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Mon Oct 23 2023 12:17:22 GMT+0000 (Coordinated Universal Time) -->
 <html
-	data-wf-domain="eyex-128.webflow.io"
+	data-wf-domain="ssstudios.in"
 	data-wf-page="63243aa30c3f2250e400c40f"
 	data-wf-site="630dbb26f5d229a691ab43d0"
 	lang="en"
 >
 	<head>
 		<meta charset="utf-8" />
-		<title>Our Services - Eyex 128</title>
-		<meta content="Our Services - Eyex 128" property="og:title" />
-		<meta content="Our Services - Eyex 128" property="twitter:title" />
+		<title>Our Services | SS Studios</title>
+		<meta content="Our Services | SS Studios" property="og:title" />
+		<meta content="Our Services | SS Studios" property="twitter:title" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<meta content="Webflow" name="generator" />
-		<link
-			href="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/css/eyex-128.webflow.7cb08ac58.css"
-			rel="stylesheet"
-			type="text/css"
-		/>
+		<link href="../css/index.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link
 			href="https://fonts.gstatic.com"
@@ -52,14 +46,11 @@
 			})(window, document);
 		</script>
 		<link
-			href="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/632c7a3ec0bc2448f0b91c99_Favicon%20Eyex.png"
+			href="../resources/logo-w.png"
 			rel="shortcut icon"
 			type="image/x-icon"
 		/>
-		<link
-			href="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/63930295a548c04c1608b098_Webclip%20Eyex.png"
-			rel="apple-touch-icon"
-		/>
+		<link href="../resources/logo-w.png" rel="apple-touch-icon" />
 		<script
 			async=""
 			src="https://www.googletagmanager.com/gtag/js?id=G-G2CEN2DJ2K"
@@ -106,11 +97,7 @@
 						href="./index.html"
 						aria-current="page"
 						class="brand w-nav-brand w--current"
-						><img
-							src="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/630dd63bf1be884c526bde7c_Eyex.svg"
-							loading="lazy"
-							alt=""
-							height="30"
+						><img src="../resources/logo.png" loading="lazy" alt="" height="80"
 					/></a>
 					<nav role="navigation" class="nav-menu w-nav-menu">
 						<div class="tablet-menu">
@@ -119,10 +106,10 @@
 								aria-current="page"
 								class="brand-tablet w-nav-brand w--current"
 								><img
-									src="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/630dd63bf1be884c526bde7c_Eyex.svg"
+									src="../resources/logo.png"
 									loading="lazy"
 									alt=""
-									height="30"
+									height="80"
 							/></a>
 							<div class="nav-close-button w-nav-button">
 								<img
@@ -383,48 +370,42 @@
 						class="right-wrapper"
 					>
 						<div class="footer-form-wrapper w-form">
-							<form
-								id="email-form"
-								name="email-form"
-								data-name="Email Form"
-								method="get"
-								class="footer-form"
-								data-wf-page-id="63243aa30c3f2250e400c40f"
-								data-wf-element-id="f9646762-0402-8b50-5cdf-7ccb5926d2a7"
-							>
+							<form class="footer-form" id="form">
 								<input
 									type="text"
 									class="text-field w-input"
 									maxlength="256"
-									name="name-2"
+									name="name"
 									data-name="Name 2"
 									placeholder="Your name"
 									id="name-2"
+									required
 								/><input
 									type="email"
 									class="text-field w-input"
 									maxlength="256"
-									name="Email-3"
+									name="email"
 									data-name="Email 3"
 									placeholder="Your email"
 									id="Email-3"
+									required
 								/><input
 									type="tel"
 									class="text-field w-input"
 									maxlength="256"
-									name="Phone-2"
+									name="phone"
 									data-name="Phone 2"
 									placeholder="Phone"
 									id="Phone-2"
 								/><input
-									type="email"
+									type="text"
 									class="text-field massage w-input"
 									maxlength="256"
-									name="Message-2"
+									name="body"
 									data-name="Message 2"
-									placeholder="Your massage"
+									placeholder="Your message"
 									id="Message-2"
-									required=""
+									required
 								/>
 								<div class="footer-button-wrapper">
 									<input
@@ -435,6 +416,26 @@
 									/>
 								</div>
 							</form>
+							<script>
+								document.addEventListener('submit', (e) => {
+									e.preventDefault();
+									var name = document.getElementById('name-2').value;
+									var email = document.getElementById('Email-3').value;
+									var phone = document.getElementById('Phone-2').value;
+									var message = document.getElementById('Message-2').value;
+									var body = `
+									Name: ${name}
+									Phone: ${phone}
+									email: ${email}
+			
+									${message}
+									`;
+
+									window.location.href = `mailto:ssdigitalstudionellai@gmail.com?subject=${encodeURIComponent(
+										'Enquire from ' + name
+									)}&&body=${encodeURIComponent(body)}`;
+								});
+							</script>
 							<div class="w-form-done">
 								<div>Thank you! Your submission has been received!</div>
 							</div>
@@ -446,13 +447,14 @@
 				</div>
 				<div class="footer-links-wrap">
 					<a
-						data-w-id="f9646762-0402-8b50-5cdf-7ccb5926d2b5"
 						href="./index.html"
-						class="logo-link w-inline-block"
+						aria-current="page"
+						class="logo-link w-inline-block w--current"
 						><img
-							src="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/630f65b1ac3592ef1203cb2d_Eyex%20(1).svg"
+							src="../resources/logo-w.png"
+							height="150"
 							loading="lazy"
-							alt=""
+							alt="logo"
 							class="logo-image"
 					/></a>
 					<div
@@ -481,20 +483,7 @@
 			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 			crossorigin="anonymous"
 		></script>
-		<script>
-			setTimeout(function () {
-				var elementToRemove =
-					document.getElementsByClassName('w-webflow-badge')[0];
-				if (elementToRemove) {
-					elementToRemove.remove();
-				} else {
-					console.error('Element not found.');
-				}
-			}, 1000);
-		</script>
-		<script
-			src="https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/js/webflow.ca21225ed.js"
-			type="text/javascript"
-		></script>
+
+		<script src="../js/index.js" type="text/javascript"></script>
 	</body>
 </html>
