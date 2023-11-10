@@ -5740,7 +5740,7 @@ solid 900', sans-serif;
 .about-us-2-banner {
 	min-height: 500px;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-		url('https://assets-global.website-files.com/630dbb26f5d229a691ab43d0/6319e344f5888c6b38079e56_image.jpg');
+		url('../resources/14.jpeg');
 	background-position: 0 0, 50%;
 	background-repeat: repeat, no-repeat;
 	background-size: auto, cover;
