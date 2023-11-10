@@ -1157,7 +1157,10 @@
 					s.style.height = 'auto';
 				});
 
-				document.querySelector(".swiper-wrapper").style.display="block"
+				document.querySelector('.swiper-wrapper').style.display = 'block';
+				document.querySelectorAll('video').forEach((v) => {
+					v.style.width = '100%';
+				});
 			}
 		</script>
 
